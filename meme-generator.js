@@ -59,7 +59,6 @@ function init() {
     imageInput = document.getElementById('image-input');
     fontStyle = document.getElementById('font-style');
     generateBtn = document.getElementById('generate-btn');
-    // downloadBtn = document.getElementById('download-btn');
     canvas = document.getElementById('meme-canvas');
     
     ctx = canvas.getContext('2d');
@@ -78,19 +77,9 @@ function init() {
     });
 
     download_img = function (el) {
-        // get image URI from canvas object
         var imageURI = canvas.toDataURL("image/jpg");
         el.href = imageURI;
     };
-
-    // downloadBtn.addEventListener("click", function() {
-    //     console.log("ok");
-    //     var imgToDownload = canvas.toDataURL("image/png", 1.0).replace("image/png", "image/octet-stream");
-    //     var link = document.createElement('a');
-    //     link.download = "my-image.png";
-    //     link.href = image;
-    //     link.click();
-    // });
 }
 
 init();
